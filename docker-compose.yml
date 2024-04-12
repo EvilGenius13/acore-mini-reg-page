@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  web:
+    build: .
+    ports:
+      - "8088:80"
+    environment:
+      DB_HOST: localhost:port
+      DB_USER: root
+      DB_PASS: pass
+      DB_NAME: auth

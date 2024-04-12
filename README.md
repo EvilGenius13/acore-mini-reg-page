@@ -17,6 +17,12 @@ Apache2, MariaDB/MySQL, PHP >=7.0
  - download project or clone to /var/www/html directory
  - go to config/ folder and edit config.php file
 
+## Usage via Docker
+- clone the repository
+- replace `DB_HOST`, `DB_USER`, `DB_PASS`, `DB_NAME` with your database credentials.
+- run `docker-compose up -d`
+- open your browser and go to `http://localhost:8088`
+
  ## Screenshot
 ![preview](https://raw.githubusercontent.com/nolt/acore-mini-reg-page/master/img/preview.jpg)
 ![preview](https://raw.githubusercontent.com/nolt/acore-mini-reg-page/master/img/preview2.jpg)
