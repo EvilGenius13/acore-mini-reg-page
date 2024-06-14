@@ -1,0 +1,10 @@
+services:
+  web:
+    restart: always
+    container_name: acore-mini-reg-page
+    build: .
+    ports:
+      - 80:80
+    env_file:
+      - .env
+

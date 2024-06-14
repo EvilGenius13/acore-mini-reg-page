@@ -6,7 +6,7 @@ This project is dedicated for Azeroth Core (maybe it will work with other cores 
 Support : [AzerothCore](http://azerothcore.org)
 
 ## Requirements:
-Apache2, MariaDB/MySQL, PHP >=7.0
+Apache2, MariaDB/MySQL, PHP >=7.0, Docker (optional)
 
 ## Installation
 
@@ -16,6 +16,11 @@ Apache2, MariaDB/MySQL, PHP >=7.0
  - systemctl restart apache2
  - download project or clone to /var/www/html directory
  - go to config/ folder and edit config.php file
+
+## Docker
+ - Clone the repository: git clone https://github.com/azerothcore/acore-mini-reg-page.git
+ - Configure the application: copy .env.example to .env and edit the file.
+ - Build and run: docker-compose up -d --build
 
  ## Screenshot
 ![preview](https://raw.githubusercontent.com/nolt/acore-mini-reg-page/master/img/preview.jpg)

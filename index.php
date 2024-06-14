@@ -7,12 +7,17 @@ require_once "module/create_account.php";
 
 $account = createAccount();
 
+$title = getenv('PAGE_TITLE') ?: 'mini RegistrationPage | Sign Up';
+$welcomeText = getenv('WELCOME_TEXT') ?: 'Welcome on <span style="color: #3590d7; font-size: 22px;"><strong>Private Realm</strong></span>.';
+$realmlist = getenv('REALM_LIST') ?: '***';
+$footer = getenv('PAGE_FOOTER') ?: '2020 Private Realm';
+
 ?>
 
 <!DOCTYPE html>
 <html>
     <head>
-        <title>mini RegistrationPage | Sign Up</title>
+        <title><?php echo $title; ?></title>
         <style>
             body {
                 background: #0c0d0d url('img/background.png') no-repeat top center;
@@ -113,9 +118,7 @@ $account = createAccount();
             </div>
 
         <div class="infoo">
-        Welcome on <span style="color: #3590d7; font-size: 22px;"><strong>Private Realm</strong></span>.
-        <br>
-        This project is only for learning purposes.
+        <?php echo $welcomeText; ?> 
         <br><br><br>
         </div>
 
@@ -138,13 +141,13 @@ $account = createAccount();
                     <li>This is a Private Realm!</li>
                     <li>This realm is for private purposes only!</li>
                     <br>
-                    <li>The realmlist is <pre>set realmlist ***</pre></li>
+                    <li>The realmlist is <pre>set realmlist <?php echo $realmlist; ?></pre></li>
                 </ul>
             </div>
         </fieldset>
 
         <footer>
-            &copy; 2020 Private Realm
+            &copy; <?php echo $footer; ?>
         </footer>
     </body>
 </html>

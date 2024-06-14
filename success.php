@@ -1,7 +1,13 @@
+<?php
+$title = getenv('PAGE_TITLE') ?: 'mini RegistrationPage | Sign Up';
+$realmlist = getenv('REALM_LIST') ?: '***';
+$footer = getenv('PAGE_FOOTER') ?: '2020 Private Realm';
+
+?>
 <!DOCTYPE html>
 <html>
     <head>
-        <title>mini RegistrationPage | Sign Up</title>
+        <title><?php echo $title; ?></title>
         <style>
             body {
                 background: #0c0d0d url('img/background.png') no-repeat top center;
@@ -83,12 +89,12 @@
             <h3>Change now your realmlist.wtf to connect.</h3>
             Navigate to your Game Client directory<br>
             Search and open realmlist.wtf with your text editor<br>
-            Change the content of the file to <pre>set realmlist ***</pre><br><br>
+            Change the content of the file to <pre>set realmlist <?php echo $realmlist; ?></pre><br><br>
             <a href="./">Back to our website</a>
         </fieldset>
 
         <footer>
-            &copy; 2020 Private Realm
+            &copy; <?php echo $footer; ?>
         </footer>
     </body>
 </html>
